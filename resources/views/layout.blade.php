@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@yield('title', 'Undertale App')</title>
+    <title>@yield('title', 'Undertale Site')</title>
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
     <style>
         body {
@@ -27,6 +27,10 @@
             color: #fff;
             padding: 10px 0;
             text-align: center;
+        }
+
+        header img {
+            width: 150px;
         }
 
         nav a {
@@ -59,11 +63,12 @@
 </head>
 <body>
     <header>
+        <img src="{{ asset('images/logo.png') }}" alt="Logo">
         <nav>
             <a href="{{ route('home') }}">Home</a>
-            <a href="{{ route('personagens') }}">Personagens</a>
+            <a href="{{ route('characters') }}">Personagens</a>
             <a href="{{ route('story') }}">História</a>
-            <a href="{{ route('contato') }}">Contato</a>
+            <a href="{{ route('contact') }}">Contato</a>
         </nav>
     </header>
     <div class="container">

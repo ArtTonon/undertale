@@ -4,5 +4,7 @@
 
 @section('content')
     <h1>Página Inicial</h1>
-    <p>Bem-vindo ao site baseado em Undertale! Aonde a DETERMINAÇÃO toca em seus corações!</p>
+    @component('components.message', ['title' => 'Bem-vindo!'])
+        Bem-vindo ao site baseado em Undertale! Onde a DETERMINAÇÃO toca em seus corações!
+    @endcomponent
 @endsection
