@@ -66,9 +66,9 @@
         <img src="{{ asset('images/logo.png') }}" alt="Logo">
         <nav>
             <a href="{{ route('home') }}">Home</a>
-            <a href="{{ route('characters') }}">Personagens</a>
+            <a href="{{ route('personagens') }}">Personagens</a>
             <a href="{{ route('story') }}">História</a>
-            <a href="{{ route('contact') }}">Contato</a>
+            <a href="{{ route('contato') }}">Contato</a>
         </nav>
     </header>
     <div class="container">
