@@ -23,14 +23,14 @@
         }
 
         header {
-            background-color: #333;
+            background-color: black;
             color: #fff;
             padding: 10px 0;
             text-align: center;
         }
 
         header img {
-            width: 150px;
+            width: 800px;
         }
 
         nav a {
@@ -58,6 +58,10 @@
 
         a:hover {
             text-decoration: underline;
+        }
+
+        img {
+            height: auto;
         }
     </style>
 </head>
