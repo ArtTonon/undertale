@@ -1,12 +1,13 @@
 <?php
 
+use App\Http\Controllers\PersonagemController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('home');
 })->name('home');
 
-Route::get('/characters', function () {
+Route::get('/personagem', function () {
     return view('personagens');
 })->name('personagens');
 
@@ -18,8 +19,11 @@ Route::get('/contact', function () {
     return view('contato');
 })->name('contato');
 
+Route::resource('personagens', PersonagemController::class );
+
+
 // Redirecionamento de rotas com nomes parecidos
-Route::get('/charactr', function () {
+Route::get('/personagens', function () {
     return redirect()->route('personagens');
 });
 Route::get('/stor', function () {

@@ -1,0 +1,13 @@
+.undertale-card {
+    background-color: #2d3748; /* bg-gray-800 */
+    border-radius: 0.5rem; /* rounded-lg */
+    overflow: hidden; /* overflow-hidden */
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05); /* shadow-lg */
+    transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out; /* transition duration-300 ease-in-out */
+  }
+  
+  .undertale-card:hover {
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3); /* hover:shadow-2xl */
+    transform: translateY(-0.25rem) scale(1.05); /* hover:-translate-y-1 hover:scale-105 */
+  }
+  
