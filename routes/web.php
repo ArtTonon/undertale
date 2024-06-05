@@ -19,7 +19,7 @@ Route::get('/contact', function () {
     return view('contato');
 })->name('contato');
 
-Route::resource('personagens', PersonagemController::class );
+//Route::resource('personagens', PersonagemController::class );
 
 
 // Redirecionamento de rotas com nomes parecidos
@@ -37,3 +37,7 @@ Route::get('/contat', function () {
 Route::fallback(function () {
     return view('error');
 });
+
+//cards de personagens
+Route::get('/personagens', [PersonagemController::class, 'index'])->name('personagens');
+Route::post('/personagens/create', [PersonagemController::class, 'create'])->name('personagens.create');
