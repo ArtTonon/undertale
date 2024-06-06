@@ -12,6 +12,10 @@
             padding: 0;
             background-color: #f4f4f4;
             background-image: url('{{ asset("images/wallpaper.png") }}');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
         }
 
         .container {
@@ -49,7 +53,7 @@
         }
 
         p {
-            color: #666;
+            color: red;
         }
 
         a {
@@ -63,6 +67,26 @@
 
         img {
             height: auto;
+        }
+
+        footer {
+            background-color: white;
+            color: black;
+            padding: 10px 0;
+            text-align: center;
+            margin-top: 500px;
+            align-items: center;
+        }
+
+        footer nav a {
+            color: black;
+            margin: 0 15px;
+        }
+        
+        footer img {
+            height: 100px;
+            display: flex;
+            justify-content: end;
         }
     </style>
 </head>
@@ -79,5 +103,6 @@
     <div class="container">
         @yield('content')
     </div>
+    @include('components.footer')
 </body>
 </html>

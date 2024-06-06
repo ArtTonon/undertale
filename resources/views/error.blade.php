@@ -7,3 +7,4 @@
     <p>Desculpe, a página que você está procurando não existe.</p>
     <p><a href="{{ route('home') }}">Voltar para a Página Inicial</a></p>
 @endsection
+

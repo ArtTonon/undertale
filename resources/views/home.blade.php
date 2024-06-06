@@ -8,3 +8,4 @@
         Bem-vindo ao site baseado em Undertale! Onde a DETERMINAÇÃO toca em seus corações!
     @endcomponent
 @endsection
+
