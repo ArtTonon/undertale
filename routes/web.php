@@ -7,9 +7,12 @@ Route::get('/', function () {
     return view('home');
 })->name('home');
 
-Route::get('/personagem', function () {
-    return view('personagens');
-})->name('personagens');
+Route::get('/personagens', [PersonagemController::class, 'index'])->name('personagens');
+Route::get('/personagens/create', [PersonagemController::class, 'create'])->name('personagens.create');
+Route::post('/personagens', [PersonagemController::class, 'store'])->name('personagens.store');
+Route::get('/personagens/{id}/edit', [PersonagemController::class, 'edit'])->name('personagens.edit');
+Route::put('/personagens/{id}', [PersonagemController::class, 'update'])->name('personagens.update');
+Route::delete('/personagens/{id}', [PersonagemController::class, 'destroy'])->name('personagens.destroy');
 
 Route::get('/story', function () {
     return view('story');
@@ -19,11 +22,8 @@ Route::get('/contact', function () {
     return view('contato');
 })->name('contato');
 
-//Route::resource('personagens', PersonagemController::class );
-
-
 // Redirecionamento de rotas com nomes parecidos
-Route::get('/personagens', function () {
+Route::get('/personagem', function () {
     return redirect()->route('personagens');
 });
 Route::get('/stor', function () {
@@ -37,7 +37,3 @@ Route::get('/contat', function () {
 Route::fallback(function () {
     return view('error');
 });
-
-//cards de personagens
-Route::get('/personagens', [PersonagemController::class, 'index'])->name('personagens');
-Route::post('/personagens/create', [PersonagemController::class, 'create'])->name('personagens.create');

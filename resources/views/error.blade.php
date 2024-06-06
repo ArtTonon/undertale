@@ -1,4 +1,4 @@
-@extends('layout')
+@extends('components.layout')
 
 @section('title', 'Página Não Encontrada')
 

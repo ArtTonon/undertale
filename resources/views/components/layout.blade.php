@@ -11,6 +11,7 @@
             margin: 0;
             padding: 0;
             background-color: #f4f4f4;
+            background-image: url('{{ asset("images/wallpaper.png") }}');
         }
 
         .container {

@@ -9,5 +9,6 @@ class Personagem extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['name', 'description'];
+    protected $table = 'personagens'; // Nome correto da tabela
+    protected $fillable = ['nome', 'descricao', 'imagem']; // Campos preenchíveis
 }
