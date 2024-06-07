@@ -37,3 +37,6 @@ Route::get('/contat', function () {
 Route::fallback(function () {
     return view('error');
 });
+
+//cards
+Route::get('/personagens', [PersonagemController::class, 'index'])->name('personagens.index');

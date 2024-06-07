@@ -12,17 +12,23 @@ class PersonagemController extends Controller
      */
     public function index()
     {
-        $personagens = Personagem::all();
-        return view('personagens.index', compact('personagens'));
-
-        $jogo = [
+        $personagensEstaticos = [
             ['name' => 'Frisk', 'image' => 'frisk.png'],
             ['name' => 'Sans', 'image' => 'sans.png'],
             ['name' => 'Papyrus', 'image' => 'papyrus.png'],
             ['name' => 'Undyne', 'image' => 'undyne.png'],
         ];
+    
+        // Dados do banco de dados
+        $personagensBancoDeDados = Personagem::all();
+    
+        // Combinar os dados
+        $personagens = array_merge($personagensEstaticos, $personagensBancoDeDados->toArray());
+    
+        return view('personagens.index', compact('personagens'));
+        // $personagens = Personagem::all();
+        // return view('personagens.index', compact('personagens'));
 
-        return view('personagens', compact('jogo'));
     }
 
     /**
