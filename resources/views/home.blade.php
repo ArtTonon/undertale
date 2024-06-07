@@ -18,7 +18,7 @@
                 <li><strong>Prólogo:</strong> Há muito tempo, uma guerra entre humanos e monstros resultou na vitória dos humanos, que selaram os monstros no subsolo com uma barreira mágica. Muitos anos depois, uma criança cai em um buraco em uma montanha e entra no mundo dos monstros.</li>
             </ul>
             <p>Crie e Descubra os Personagens que a comunidade tem a oferecer</p>
-            <a class="btn btn-primary btn-lg" href="{{ route('personagens') }}" role="button">Ver Personagens</a>
+            <a class="btn btn-primary btn-lg" href="{{ route('personagens.index') }}" role="button">Ver Personagens</a>
         </div>
 @endsection
 
