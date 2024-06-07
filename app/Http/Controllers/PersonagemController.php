@@ -38,20 +38,20 @@ class PersonagemController extends Controller
      * Store a newly created resource in storage.
      */
     public function store(Request $request)
-    {
-        // Validação dos dados
-        $validatedData = $request->validate([
-            'nome' => 'required|string|max:255',
-            'descricao' => 'required|string|max:255',
-            'imagem' => 'required|string|max:255',
-        ]);
+{
+    // Validação dos dados
+    $validatedData = $request->validate([
+        'nome' => 'required|string|max:255',
+        'descricao' => 'required|string|max:255',
+        'imagem' => 'required|url|max:255',
+    ]);
 
-        // Criação do Personagem
-        Personagem::create($validatedData);
+    // Criação do Personagem
+    Personagem::create($validatedData);
 
-        // Redirecionamento
-        return redirect()->route('personagens');
-    }
+    // Redirecionamento
+    return redirect()->route('personagens.index');
+}
 
     /**
      * Display the specified resource.
@@ -75,23 +75,20 @@ class PersonagemController extends Controller
      * Update the specified resource in storage.
      */
     public function update(Request $request, $id)
-    {
-        // Validação dos dados
-        $validatedData = $request->validate([
-            'nome' => 'required|string|max:255',
-            'descricao' => 'required|string|max:255',
-            'imagem' => 'required|string|max:255',
-        ]);
+{
+    // Validação dos dados
+    $validatedData = $request->validate([
+        'nome' => 'required|string|max:255',
+        'descricao' => 'required|string|max:255',
+        'imagem' => 'required|url|max:255',
+    ]);
 
-        $personagem = Personagem::findOrFail($id);
-        $personagem->update($validatedData);
+    $personagem = Personagem::findOrFail($id);
+    $personagem->update($validatedData);
 
-        // Atualização do Personagem
-        
-
-        // Redirecionamento
-        return redirect()->route('personagens');
-    }
+    // Redirecionamento
+    return redirect()->route('personagens.index');
+}
 
     /**
      * Remove the specified resource from storage.
