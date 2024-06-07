@@ -24,6 +24,7 @@
             </div>
         @endforeach
     </div>
-
-    <a href="{{ route('personagens.create') }}" class="btn btn-success mt-10">Adicionar Personagem</a>
+    <div class="mt-10">
+    <a href="{{ route('personagens.create') }}" class="btn btn-success">Adicionar Personagem</a>
+</div>
 @endsection

@@ -53,7 +53,7 @@
         }
 
         p {
-            color: red;
+            color: #4e4e4e;
         }
 
         a {
@@ -74,7 +74,7 @@
             color: black;
             padding: 10px 0;
             text-align: center;
-            margin-top: 500px;
+            margin-top: 50px;
             align-items: center;
         }
 
@@ -88,6 +88,18 @@
             display: flex;
             justify-content: end;
         }
+
+        .jumbotron {
+    background-color: #f0f0f0;
+    padding: 2rem 1rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.jumbotron p {
+    font-size: 18px;
+    line-height: 1.6;
+}
     </style>
 </head>
 <body>
