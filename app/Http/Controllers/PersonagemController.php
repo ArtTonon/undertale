@@ -14,6 +14,15 @@ class PersonagemController extends Controller
     {
         $personagens = Personagem::all();
         return view('personagens.index', compact('personagens'));
+
+        $jogo = [
+            ['name' => 'Frisk', 'image' => 'frisk.png'],
+            ['name' => 'Sans', 'image' => 'sans.png'],
+            ['name' => 'Papyrus', 'image' => 'papyrus.png'],
+            ['name' => 'Undyne', 'image' => 'undyne.png'],
+        ];
+
+        return view('personagens', compact('jogo'));
     }
 
     /**

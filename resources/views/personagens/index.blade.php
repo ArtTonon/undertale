@@ -28,3 +28,11 @@
     <a href="{{ route('personagens.create') }}" class="btn btn-success">Adicionar Personagem</a>
 </div>
 @endsection
+
+@section('content')
+<div style="display: flex; flex-wrap: wrap; gap: 20px;">
+    @foreach ($jogo as $personagem)
+        @include('components.card', ['name' => $personagem['name'], 'image' => $personagem['image']])
+    @endforeach
+</div>
+@endsection
